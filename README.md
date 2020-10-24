@@ -24,11 +24,11 @@ $ docker run -dit -p 53:53/tcp -p 53:53/udp --cap-add=NET_ADMIN --name my-resolv
 ```
 $ docker run -dit --cap-add=NET_ADMIN --name my-resolver dnsmasq google
 ```
-- `**-p**` : Forward ports to dnsmasq container.
-- `**--cap-add=NET_ADMIN**` : Require additional linux capibilities and make dnsmasq to listen directly on available network interface.
-- `**--name**` : Set a name for the container, here `my-resolver` is the name of Docker container created with above example.
-- `**dnsmasq**` : Name of the Docker image used for creating `my-resolver` container. This image name was used the above Docker build section.
-- `**google**` : Prefered upstream DNS resolver set for dnsmasq inside `my-resolver` container.
+- `*-p*` : Forward ports to dnsmasq container.
+- `*--cap-add=NET_ADMIN*` : Require additional linux capibilities and make dnsmasq to listen directly on available network interface.
+- `*--name*` : Set a name for the container, here `my-resolver` is the name of Docker container created with above example.
+- `*dnsmasq*` : Name of the Docker image used for creating `my-resolver` container. This image name was used the above Docker build section.
+- `*google*` : Prefered upstream DNS resolver set for dnsmasq inside `my-resolver` container.
 
 ## Update /etc/resolv.conf
 The container will listen on all available network interface.
