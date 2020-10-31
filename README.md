@@ -20,6 +20,8 @@ Currently supported upstream DNS are :
 $ docker run -dit -p 53:53/tcp -p 53:53/udp --cap-add=NET_ADMIN --name my-resolver dnsmasq <google | opendns | cloudflare | quad9>
 ```
 
+#### Note: If upstream is not specified, then container uses the IPs in the target host's /etc/resolv.conf file as upstream servers.
+
 #### Example
 ```
 $ docker run -dit --cap-add=NET_ADMIN --name my-resolver dnsmasq google
